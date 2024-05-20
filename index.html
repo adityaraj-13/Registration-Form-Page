@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="message">
+                <h2>Hello Friend!</h2>
+                <p>Enter your personal details and start journey with us</p>
+            </div>
+            <div class="registration">
+                <form>
+                    <h1>Registration Form</h1>
+                    <div class="form-group">
+                        <label for="username"><i class='bx bx-user-circle'></i> Username:</label>
+                        <input type="text" placeholder="Enter your name" id="username" name="username" required>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="Enter your Email id to contact" id="email" name="email" required>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="bx bxs-lock-alt"></i> Password:</label>
+                        <input type="password" placeholder="Make a strong password" id="password" name="password" required>
+                        
+                    </div>
+                    <div class="member">
+                        <a href="#" style="color: white;">Already have account?</a>
+                    </div><br>
+                    <div class="form-group">
+                        <button type="submit">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="successMessage" class="hidden">
+            <div class="tickAnimation">
+                <svg viewBox="0 0 24 24" class="tickIcon">
+                    <path d="M20.71 5.29a1 1 0 0 0-1.42 0L9 16.59l-4.29-4.3a1 1 0 1 0-1.42 1.42l5 5a1 1 0 0 0 1.42 0L20 6.71a1 1 0 0 0 .71-1.7z"/>
+                </svg>
+            </div>
+            <p>Registration Successful!</p>
+        </div>
+        
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>

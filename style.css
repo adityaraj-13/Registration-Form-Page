@@ -1,0 +1,217 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; 
+    color:white;
+}
+
+.background{
+    background: url("Cool-Desktop-Wallpaper-1024x576.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(155, 12, 103, 0.3); 
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px auto; 
+    overflow: hidden; 
+    backdrop-filter: blur(20px);
+}
+
+
+.message {
+    width: 35%;
+    height: 448.219px;
+    text-align: center;
+    padding: 20px;
+    background-color: #DF235A;
+    color: #fff; 
+    border-top-left-radius: 12px; 
+    border-bottom-left-radius: 12px; 
+    box-shadow: 8px 0px 16px rgba(0, 0, 0, 0.9); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: bkg-color 10s ease-out alternate-reverse infinite;
+}
+
+@keyframes bkg-color{
+    0%{
+        background-color:#F84C5C /*#d4537a;*/
+    }
+    20%{
+        background-color:#E3096B/*#DF235A;*/
+
+    }
+    60%{
+        background-color: #890C6A/*#ff004c;*/
+    }
+    80%{
+        background-color: #3D064D;
+    }
+    100%{
+        background-color: #1F092A;
+    }
+}
+
+
+.registration {
+    width: 65%; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styles */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    background: transparent;
+    color: white;
+    
+}
+
+
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: #2D0523; 
+    color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease; 
+}
+
+button[type="submit"]:hover {
+    background-color: #6C0965; 
+}
+
+#successMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #66cc66;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#successMessage.show {
+    opacity: 1;
+}
+.tickAnimation {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: scaleUp 0.5s ease forwards;
+}
+
+.tickIcon{
+    fill: #66cc66;
+    width: 50px;
+    height: 50px;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .background{
+        background-position:50%;
+    }
+    .container {
+        flex-direction: column;
+        height:inherit;
+    }
+    .message,
+    .registration {
+        width: 100%; 
+        border-radius: 12px; 
+        box-shadow: none; 
+        
+    }
+    .form-group{
+        width: 270px;
+    }
+    .message::before {
+        display: none; 
+    }
+    .tickAnimation{
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
+    }
+    .tickIcon{
+        width: 40px;
+        height: 40px;
+    }
+}
